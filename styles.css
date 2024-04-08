@@ -91,6 +91,10 @@ section.titulo {
 
 section.sobremim {
 
+    .sobremim__container {
+        width: 66.7%;
+        text-align: justify;
+    }
 }
 
 section.skills {
