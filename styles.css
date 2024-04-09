@@ -1,11 +1,15 @@
 :root{
    --cor-de-fundo: #F5F5F5;
+   --cor-de-fundo2: #EAF2FD;
    --cor-de-link: #000;
+   --cor-de-icone: #247AE4;
+   --cor-de-fonte: #464646;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-fonte);
     font-family: 'Raleway', sans-serif;
     margin-top: 2%;
     margin-left:12.5%;
@@ -91,6 +95,7 @@ section.titulo {
 
 section.sobremim {
 
+    background-color: var(--cor-de-fundo2);
     .sobremim__container {
         width: 66.7%;
         text-align: justify;
@@ -98,14 +103,143 @@ section.sobremim {
 }
 
 section.skills {
+    display: flex;
+    flex-direction: column;
 
+    .skills__titulo {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .skills__linha {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skills__caixa {
+        width: 150px;
+        height: 148px;
+        background-color: white;
+    }
+
+    .skills__caixa > ul {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .skills__img {
+        font-size: 48px;
+        color: var(--cor-de-icone);
+    }
+
+    .skills__nome {
+        margin-bottom: 25px;
+    }
 }
 
 section.hobbies {
+    display: flex;
+    flex-direction: column;
 
+    .hobbies__titulo {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .hobbies__linha {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hobbies__caixa {
+        width: 150px;
+        height: 148px;
+        background-color: white;
+    }
+
+    .hobbies__caixa > ul {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .hobbies__img {
+        font-size: 48px;
+        color: var(--cor-de-icone);
+    }
+
+    .hobbies__nome {
+        margin-bottom: 5px;
+    }
 }
 
 section.formacao {
+
+    background-color: var(--cor-de-fundo2);
+    box-sizing: border-box;
+    margin-bottom: 25px;
+
+    .formacao__cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+    
+    .formacao__cursos__caixa {
+        flex-shrink: 1;
+    }
+
+    .formacao__cursos__lista {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formacao__cursos__item__img {
+        max-width: 368px;
+        max-height: 286px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formacao__cursos__item__img > img {
+        max-width: 192px;
+        max-height: 130px;
+        width: auto;
+        height: auto;
+    }
+
+    .formacao__cursos__item__titulo {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .formacao__cursos__item__subtitulo {
+        font-size: 16px;  
+        margin-top: 5px; 
+    }
 
 }
 
@@ -114,6 +248,8 @@ section.experiencia {
 }
 
 section.contato {
+
+    background-color: var(--cor-de-fundo2);
 
 }
 
