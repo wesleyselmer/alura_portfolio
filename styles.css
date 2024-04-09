@@ -4,6 +4,7 @@
    --cor-de-link: #000;
    --cor-de-icone: #247AE4;
    --cor-de-fonte: #464646;
+   --shadow: #00000025 0px 4px 4px;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     background-color: var(--cor-de-fundo);
     color: var(--cor-de-fonte);
     font-family: 'Raleway', sans-serif;
+    text-shadow: var(--shadow);
     margin-top: 2%;
     margin-left:12.5%;
     margin-right:12.5%;
@@ -23,6 +25,14 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: var(--shadow);
+    padding: 5px;
 }
 
 section.menu {
@@ -96,6 +106,8 @@ section.titulo {
 section.sobremim {
 
     background-color: var(--cor-de-fundo2);
+    box-shadow: var(--shadow);
+
     .sobremim__container {
         width: 66.7%;
         text-align: justify;
@@ -121,6 +133,7 @@ section.skills {
         width: 150px;
         height: 148px;
         background-color: white;
+        box-shadow: var(--shadow);
     }
 
     .skills__caixa > ul {
@@ -164,6 +177,7 @@ section.hobbies {
         width: 150px;
         height: 148px;
         background-color: white;
+        box-shadow: var(--shadow);
     }
 
     .hobbies__caixa > ul {
@@ -194,13 +208,19 @@ section.formacao {
     box-sizing: border-box;
     margin-bottom: 25px;
 
+    .formacao__titulo {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
     .formacao__cursos {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 30px;
 
     }
     
@@ -232,13 +252,13 @@ section.formacao {
     }
 
     .formacao__cursos__item__titulo {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
         margin-top: 5px;
     }
 
     .formacao__cursos__item__subtitulo {
-        font-size: 16px;  
+        font-size: 15px;  
         margin-top: 5px; 
     }
 
@@ -246,6 +266,78 @@ section.formacao {
 
 section.experiencia {
 
+    margin: 0 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+
+    .experiencia__titulo {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .experiencia__caixa {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .experiencia__caixa__alt {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+        margin-bottom: 15px;
+    }
+
+    .experiencia__caixa > img {
+        max-width: 70%;
+        box-shadow: var(--shadow);
+    }
+
+    .experiencia__caixa__alt > img {
+        max-width: 70%;
+        box-shadow: var(--shadow);
+    }
+
+    .experiencia__info {
+        max-width: 30%;
+    }
+
+    .experiencia__info__titulo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .experiencia__info__texto {
+        font-size: 16px;
+    }
+
+    .experiencia__descricao {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .experiencia__repo {
+        padding: 15px;
+        border: 1px solid var(--cor-de-icone);
+    }
+
+    .experiencia__repo > a {
+        color: var(--cor-de-icone);
+        font-size: 22px;
+    }
+
+    .experiencia__demo {
+        padding: 15px;
+        border: none;
+        background-color: var(--cor-de-icone);
+    }
+
+    .experiencia__demo > a {
+        color: var(--cor-de-fundo);
+        font-size: 22px;
+    }
 }
 
 section.contato {
