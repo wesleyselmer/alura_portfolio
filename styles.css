@@ -3,11 +3,13 @@
    --cor-de-fundo2: #EAF2FD;
    --cor-de-link: #000;
    --cor-de-icone: #247AE4;
+   --cor-de-fonte: #464646;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-fonte);
     font-family: 'Raleway', sans-serif;
     margin-top: 2%;
     margin-left:12.5%;
@@ -189,6 +191,55 @@ section.hobbies {
 section.formacao {
 
     background-color: var(--cor-de-fundo2);
+    box-sizing: border-box;
+    margin-bottom: 25px;
+
+    .formacao__cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+    }
+    
+    .formacao__cursos__caixa {
+        flex-shrink: 1;
+    }
+
+    .formacao__cursos__lista {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formacao__cursos__item__img {
+        max-width: 368px;
+        max-height: 286px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formacao__cursos__item__img > img {
+        max-width: 192px;
+        max-height: 130px;
+        width: auto;
+        height: auto;
+    }
+
+    .formacao__cursos__item__titulo {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .formacao__cursos__item__subtitulo {
+        font-size: 16px;  
+        margin-top: 5px; 
+    }
 
 }
 
