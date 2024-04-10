@@ -210,18 +210,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </section>
             <section class="contato" id="contato">
-                <h2 class="contato__titulo">Contato</h2>
-                <h3 class="contato__subtexto">Quer entrar em contato comigo?</h3>
-                <h3 class="contato__subtexto">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
-                <form class="contato__formulario">
-                    <input type="text" class="contato__formulario__input" id="nome" placeholder="Nome">
-                    <input type="email" class="contato__formulario__input" id="email" placeholder="E-mail">
-                    <textarea name="mensagem" id="mensagem" cols="40" rows="5" class="contato__formulario__textarea" placeholder="Sua mensagem"></textarea>
-                    <button class="contato__formulario__botao">Enviar mensagem</button>
-                </form>
+                <img class="contato__img" src="assets/contato.png" alt="">
+                <div class="contato__info">
+                    <h2 class="contato__titulo">Contato</h2>
+                    <h3 class="contato__subtexto">Quer entrar em contato comigo?</h3>
+                    <h3 class="contato__subtexto">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
+                    <form class="contato__formulario">
+                        <div class="contato__formulario__caixa">
+                            <span class="contato__formulario__titulo">Nome:</span>
+                            <input type="text" class="contato__formulario__input" id="nome">
+                        </div>
+                        <div class="contato__formulario__caixa">
+                            <span class="contato__formulario__titulo">E-mail:</span>
+                            <input type="email" class="contato__formulario__input" id="email">
+                        </div>
+                        <div class="contato__formulario__caixa">
+                            <span class="contato__formulario__titulo">Assunto:</span>
+                            <input type="text" class="contato__formulario__input" id="assunto">
+                        </div>
+                        <textarea name="mensagem" id="mensagem" cols="40" rows="5" class="contato__formulario__textarea" placeholder="Sua mensagem"></textarea>
+                        <button class="contato__formulario__botao">Enviar mensagem</button>
+                    </form>
+                </div>
             </section>
             <section class="rodape">
                 <div class="rodape__container">

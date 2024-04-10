@@ -1,6 +1,7 @@
 :root{
    --cor-de-fundo: #F5F5F5;
    --cor-de-fundo2: #EAF2FD;
+   --cor-de-fundo3: #f2f6fc;
    --cor-de-link: #000;
    --cor-de-icone: #247AE4;
    --cor-de-fonte: #464646;
@@ -132,7 +133,7 @@ section.skills {
     .skills__caixa {
         width: 150px;
         height: 148px;
-        background-color: white;
+        background-color: var(--cor-de-fundo2);
         box-shadow: var(--shadow);
     }
 
@@ -176,7 +177,7 @@ section.hobbies {
     .hobbies__caixa {
         width: 150px;
         height: 148px;
-        background-color: white;
+        background-color: var(--cor-de-fundo2);
         box-shadow: var(--shadow);
     }
 
@@ -290,17 +291,20 @@ section.experiencia {
     }
 
     .experiencia__caixa > img {
-        max-width: 70%;
+        max-width: 60%;
         box-shadow: var(--shadow);
+        flex-shrink: 3;
     }
 
     .experiencia__caixa__alt > img {
-        max-width: 70%;
+        max-width: 60%;
         box-shadow: var(--shadow);
+        flex-shrink: 3;
     }
 
     .experiencia__info {
         max-width: 30%;
+        flex-shrink: 1;
     }
 
     .experiencia__info__titulo {
@@ -343,17 +347,90 @@ section.experiencia {
 section.contato {
 
     background-color: var(--cor-de-fundo2);
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .contato__img {
+        max-height: 600px;
+        flex-shrink: 2;
+    }
+
+    .contato__info {
+        width: 60%;
+        flex-shrink: 1;
+    }
+
+    .contato__titulo {
+        font-size: 32;
+        font-weight: bold;
+    }
+
+    .contato__subtexto {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .contato__formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+
+    .contato__formulario__caixa {
+        height: 56px;
+        background-color: var(--cor-de-fundo);
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .contato__formulario__nome__titulo {
+        font-size: 14px;
+        color: #A2A2A2;
+    }
+
+    .contato__formulario__input, .contato__formulario__textarea {
+        border: none;
+        box-shadow: 0px 0px 2px gray ;
+        font-size: 18px;
+        margin: 0 5px 0 3px;
+    }
+
+    
+
+    .contato__formulario__botao {
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        background-color: var(--cor-de-icone);
+        color: var(--cor-de-fundo2);
+        font-size: 22px;
+        
+    }
 
 }
 
 section.rodape {
+    .rodape__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rodape__container > p {
+        margin: 5px 0;
+        font-size: 18px;;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1300px) {
 
 }
 
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 425px) {
+@media (min-width: 425px){
     
 }
