@@ -111,7 +111,9 @@ a {
         }
 
         .titulo__perfil {
-            width: 20vw;
+            width: 384px;
+            height: 384px;
+            object-fit: cover;
             border-radius: 50%;
             margin-right: 40px;
         }
@@ -269,11 +271,9 @@ a {
         }
 
         .formacao__cursos__item__img > img {
-            max-width: 192px;
-            max-height: 130px;
-            width: auto;
-            height: auto;
-            flex-shrink: 2;
+            width: 192px;
+            height: 130px;
+            object-fit: contain;
         }
 
         .formacao__cursos__item__titulo {
@@ -318,15 +318,17 @@ a {
         }
 
         .experiencia__caixa > img {
-            max-width: 60%;
+            width: 752px;
+            height: 406px;
+            object-fit: contain;
             box-shadow: var(--shadow);
-            flex-shrink: 3;
         }
 
         .experiencia__caixa__alt > img {
-            max-width: 60%;
+            width: 752px;
+            height: 406px;
+            object-fit: contain;            
             box-shadow: var(--shadow);
-            flex-shrink: 3;
         }
 
         .experiencia__info {
@@ -383,7 +385,9 @@ a {
         gap: 40px;
 
         .contato__img {
-            max-height: 600px;
+            width: 464px;
+            height: 593px;
+            object-fit: contain;
             flex-shrink: 2;
         }
 
@@ -454,7 +458,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 1300px) {
     section.menu {
-        
+
     }
     section.titulo {}
     section.sobremim {}
