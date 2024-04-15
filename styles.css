@@ -60,6 +60,7 @@ section.menu {
     .header{
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 10px;
     }
 
@@ -203,8 +204,8 @@ section.formacao {
     }
 
     .formacao__cursos__item__img > img {
-        width: 84px;
-        height: 58px;
+        max-width: 84px;
+        max-height: 58px;
         object-fit: contain;
     }
 
@@ -358,60 +359,17 @@ section.rodape {
 }   
 
 /*Tablet: Config de 768px até 1300px*/
-@media (min-width: 768px) and (max-width: 1300px) {
+@media (min-width: 768px) {
     body {
         padding: 0 10vw 0 10vw;
     }
     
-    section.menu {
-
-    }
-    section.titulo {}
-    section.sobremim {}
-    section.skills {}
-    section.hobbies {}
-    section.formacao {}
-    section.experiencia {}
-    section.contato {}
-    section.rodape {}
-}
-
-/*Desktop: Acima de 1300px*/
-@media (min-width: 1300px) {
-
-    body {
-        padding: 0 10vw 0 10vw;
-    }
-
-    section.menu {
-        flex-wrap: wrap;
-        align-items: center;
-        
-        .header {
-            margin: 20px;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .menu__titulo {
-            font-size: 26px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 40px;
-        }
-
-        .menu__lista{
-            display: flex;
-            flex-direction: row;
-            gap: 25px;
-            justify-content: flex-end;
-        }
-    }
-
     section.titulo {
+        
+        .titulo__perfil {
+            width: 146px;
+            height: 146px;
+        }
 
         .titulo__div {
             display: flex;
@@ -421,81 +379,133 @@ section.rodape {
         }
 
         .titulo__container {
-            width: 50vw;
+            align-self: flex-start;
+        }
+
+        .titulo__conexoes {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+    }
+
+    section.formacao {
+
+        .formacao__cursos {
+            justify-content: space-between;
+        }
+
+        .formacao__cursos__lista {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 220px;
+        }
+
+        .formacao__cursos__item__img {
+            align-self: center;
+        }
+    }
+}
+
+/*Desktop: Acima de 1300px*/
+@media (min-width: 1300px) {
+
+    section.menu {
+
+        margin-top: 40px;
+
+        .menu__titulo {
+            font-size: 26px;
+        }
+
+        .menu__lista {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }        
+
+        #menu1, #menu2, #menu3, #menu4, #menu5 {
+            display: block;
+        }
+
+        .menu__lista__item {
+            font-size: 22px;
+            font-weight: normal;
+        }
+    }
+
+    section.titulo {
+
+        .titulo__container {
+            max-width: 66.67%;
+            align-self: center;
+        }
+        
+        .titulo__perfil {
+            width: 384px;
+            height: 384px;
         }
 
         .titulo__bio {
             font-size: 52px;
-            margin-bottom: 30px;
+            font-weight: bold;
         }
 
         .titulo__subsecao {
-            font-size: 22px;
-            margin: 0;
-        }
-
-        .titulo__conexoes {
-            gap: 20px;
-        }
-
-        .titulo__perfil {
-            width: 384px;
-            height: 384px;
-            margin-right: 40px;
+            font-size: 28px;
+            margin-bottom: 20px;
         }
     }
 
     section.sobremim {
-
-        .sobremim__container {
-            text-align: justify;
-
-        }
+        max-width: 66.67%;
 
         .sobremim__titulo {
-            text-align: left;
-            font-size: 32px;
-            margin-bottom: 20px;
+            text-align: left !important;
         }
 
         .sobremim__paragrafo {
-            width: 50vw;
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 19px;
+            font-weight: normal;
         }
     }
 
     section.skills {
         
-        .skills__titulo {
-            font-size: 32px;
+        .skills__caixa {
+            width: 176px;
+            height: 174px;
+        }
+
+        .skills__nome {
+            font-size: 22px;
+            font-weight: bold;
         }
     }
 
     section.hobbies { 
         
-        .hobbies__titulo {
-            font-size: 32px;
-        }    
+        .hobbies__caixa {
+            width: 176px;
+            height: 174px;
+        }
+
+        .hobbies__nome {
+            font-size: 22px;
+            font-weight: bold;
+        }
     }
 
     section.formacao {
 
-        margin-bottom: 25px;
-
-        .formacao__cursos {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-
-        }
-
         .formacao__cursos__item__img {
             max-width: 368px;
             max-height: 286px;
+        }
+
+        .formacao__cursos__item__img > img {
+            max-width: 192px;
+            max-height: 130px;
         }
     }
 
@@ -510,6 +520,7 @@ section.rodape {
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+            margin-bottom: 15px;
         }
         
         .experiencia__caixa__alt {
@@ -521,13 +532,13 @@ section.rodape {
         }
 
         .experiencia__caixa > img {
-            width: 752px;
-            height: 406px;
+            width: 772px;
+            height: 426px;
         }
 
         .experiencia__caixa__alt > img {
-            width: 752px;
-            height: 406px;
+            width: 772px;
+            height: 426px;
             object-fit: contain;            
             box-shadow: var(--shadow);
         }
@@ -538,12 +549,14 @@ section.rodape {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            align-self: center;
         }
     }
 
     section.contato {
 
         .contato__img {
+            display: block;
             width: 464px;
             height: 593px;
             object-fit: contain;
