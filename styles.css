@@ -42,6 +42,13 @@ a {
     box-shadow: var(--shadow);
 }
 
+.titulo__secao {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 
 /*Mobile-First: Config até 768px*/
 section.menu {
@@ -98,12 +105,6 @@ section.sobremim {
     background-color: var(--cor-de-fundo2);
     box-shadow: var(--shadow);
 
-    .sobremim__titulo {
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-    }
-
     .sobremim__paragrafo {
         text-align: justify;
     }
@@ -111,12 +112,6 @@ section.sobremim {
 section.skills {
     display: flex;
     flex-direction: column;
-
-    .skills__titulo {
-        text-align: center;
-        font-size: 26px;
-        font-weight: bold;
-    }
 
     .skills__linha {
         display: flex;
@@ -154,11 +149,6 @@ section.hobbies {
     display: flex;
     flex-direction: column;
 
-    .hobbies__titulo {
-        text-align: center;
-        font-size: 26px;
-    }
-
     .hobbies__linha {
         display: flex;
         flex-direction: row;
@@ -190,10 +180,182 @@ section.hobbies {
     }
 
 }
-section.formacao {}
-section.experiencia {}
-section.contato {}
-section.rodape {}   
+section.formacao {
+
+    background-color: var(--cor-de-fundo2);
+    box-sizing: border-box;
+
+    .formacao__cursos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .formacao__cursos__item__img {
+        max-width: 296px;
+        max-height: 118px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formacao__cursos__item__img > img {
+        width: 84px;
+        height: 58px;
+        object-fit: contain;
+    }
+
+    .formacao__cursos__item__titulo {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .formacao__cursos__item__subtitulo {
+        font-size: 15px;  
+        margin-top: 5px; 
+    }
+        
+}
+section.experiencia {
+
+    .experiencia__caixa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .experiencia__caixa__alt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .experiencia__caixa > img {
+        width: 296px;
+        height: 144px;
+        object-fit: contain;
+        box-shadow: var(--shadow);
+        margin-bottom: 5px;
+    }
+
+    .experiencia__caixa__alt > img {
+        width: 296px;
+        height: 144px;
+        object-fit: contain;
+        box-shadow: var(--shadow);
+        margin-bottom: 5px;
+    }
+
+    .experiencia__info {
+        align-self: flex-start;
+    }
+
+    .experiencia__info__titulo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .experiencia__info__texto {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .experiencia__descricao {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .experiencia__repo {
+        padding: 15px;
+        border: 1px solid var(--cor-de-icone);
+    }
+
+    .experiencia__repo > a {
+        color: var(--cor-de-icone);
+        font-size: 22px;
+    }
+
+    .experiencia__demo {
+        padding: 15px;
+        border: none;
+        background-color: var(--cor-de-icone);
+    }
+
+    .experiencia__demo > a {
+        color: var(--cor-de-fundo);
+        font-size: 22px;
+    }
+}
+section.contato {
+
+    background-color: var(--cor-de-fundo2);
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .contato__img {
+        display: none;
+    }
+
+    .contato__info {
+        width: 100%;
+    }
+
+    .contato__formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 25px; 
+    }
+
+    .contato__formulario__caixa {
+        height: 56px;
+        background-color: var(--cor-de-fundo);
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }    
+
+    .contato__formulario__titulo {
+        font-size: 18px;
+        color: #A2A2A2;
+    }
+
+    .contato__formulario__input, .contato__formulario__textarea {
+        font-size: 22px;
+    }
+
+    .contato__formulario__botao {
+        padding: 10px;
+        margin-top: 10px;
+        max-width: 150px;
+        border: none;
+        background-color: var(--cor-de-icone);
+        color: var(--cor-de-fundo2);
+        font-size: 20px;
+    }
+}
+section.rodape {
+    
+    .rodape__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rodape__container > p {
+        margin: 5px 0;
+        font-size: 18px;;
+    }
+}   
 
 /*Tablet: Config de 768px até 1300px*/
 @media (min-width: 768px) and (max-width: 1300px) {
@@ -319,15 +481,7 @@ section.rodape {}
 
     section.formacao {
 
-        background-color: var(--cor-de-fundo2);
-        box-sizing: border-box;
         margin-bottom: 25px;
-
-        .formacao__titulo {
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-        }
 
         .formacao__cursos {
             display: flex;
@@ -338,43 +492,11 @@ section.rodape {}
             gap: 30px;
 
         }
-        
-        .formacao__cursos__caixa {
-            flex-shrink: 1;
-        }
-
-        .formacao__cursos__lista {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
 
         .formacao__cursos__item__img {
             max-width: 368px;
             max-height: 286px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-
-        .formacao__cursos__item__img > img {
-            width: 192px;
-            height: 130px;
-            object-fit: contain;
-        }
-
-        .formacao__cursos__item__titulo {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        .formacao__cursos__item__subtitulo {
-            font-size: 15px;  
-            margin-top: 5px; 
-        }
-
     }
 
     section.experiencia {
@@ -384,17 +506,10 @@ section.rodape {}
         flex-direction: column;
         gap: 20px;
 
-        .experiencia__titulo {
-            text-align: center;
-            font-size: 32px;
-        }
-
         .experiencia__caixa {
-            display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            margin-bottom: 15px;
         }
         
         .experiencia__caixa__alt {
@@ -408,8 +523,6 @@ section.rodape {}
         .experiencia__caixa > img {
             width: 752px;
             height: 406px;
-            object-fit: contain;
-            box-shadow: var(--shadow);
         }
 
         .experiencia__caixa__alt > img {
@@ -426,63 +539,14 @@ section.rodape {}
             justify-content: center;
             align-items: center;
         }
-
-        .experiencia__info__titulo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .experiencia__info__texto {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .experiencia__descricao {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        .experiencia__repo {
-            padding: 15px;
-            border: 1px solid var(--cor-de-icone);
-        }
-
-        .experiencia__repo > a {
-            color: var(--cor-de-icone);
-            font-size: 22px;
-        }
-
-        .experiencia__demo {
-            padding: 15px;
-            border: none;
-            background-color: var(--cor-de-icone);
-        }
-
-        .experiencia__demo > a {
-            color: var(--cor-de-fundo);
-            font-size: 22px;
-        }
     }
 
     section.contato {
-
-        background-color: var(--cor-de-fundo2);
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
 
         .contato__img {
             width: 464px;
             height: 593px;
             object-fit: contain;
-            flex-shrink: 2;
-        }
-
-        .contato__titulo {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 15px;
         }
 
         .contato__subtexto {
@@ -490,56 +554,14 @@ section.rodape {}
             font-weight: normal;
         }
 
-        .contato__formulario {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 25px;
-            
-        }
-
-        .contato__formulario__caixa {
-            height: 56px;
-            background-color: var(--cor-de-fundo);
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-        }
-
-        .contato__formulario__titulo {
-            font-size: 18px;
-            color: #A2A2A2;
-        }
-
         .contato__formulario__input, .contato__formulario__textarea {
             border: none;
-            font-size: 22px;
             padding: 10px 0 0;
         }
 
         .contato__formulario__botao {
-            padding: 10px;
-            margin-top: 10px;
             width: 12.5vw;
-            border: none;
-            background-color: var(--cor-de-icone);
-            color: var(--cor-de-fundo2);
             font-size: 22px;
         }
     }
-
-    section.rodape {
-        .rodape__container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .rodape__container > p {
-            margin: 5px 0;
-            font-size: 18px;;
-        }
-    }
-
 }
